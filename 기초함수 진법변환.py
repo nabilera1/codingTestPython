@@ -10,3 +10,4 @@ print(n1.zfill(10))
 
 n2='hello'
 print(n2.zfill(10))
+
