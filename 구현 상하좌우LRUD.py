@@ -29,9 +29,8 @@ for m in moveCmd:
 
     if newX < 1 or newY < 1 or newX > n or newY > n:
         continue
-    x,y=newX, newY
-print(x,y)
-
+    x, y = newX, newY
+print(x, y)
 
 # 5
 # R R U D D D

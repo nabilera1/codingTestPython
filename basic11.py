@@ -31,6 +31,9 @@
 # print(arr)
 # print(arr[0])
 # print(arr[-1])
+# 아래 방법 사용
+# arr.sort()
+# print(arr)
 
 stack=[]
 #스택에 넣을 때 5 3 2 9
