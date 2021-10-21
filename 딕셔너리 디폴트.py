@@ -1,9 +1,9 @@
-#https://medium.com/swlh/python-collections-defaultdict-dictionary-with-default-values-and-automatic-keys-305540540d2a
+# https://medium.com/swlh/python-collections-defaultdict-dictionary-with-default-values-and-automatic-keys-305540540d2a
 # So What exactly is DefaultDict?
 # defaultdict is a dict for all practical purpose.
 # You don’t need to learn new syntax
 # or understand anything special to start using dict.
-#일반적인 경우
+# 일반적인 경우
 # dct={}
 # #v1=dct['a1'] #keyError : 'a1'
 # if  'a1' not in dct:
@@ -27,6 +27,7 @@
 # 딕셔너리와 해시는
 # 유일한 값(반복되지 않는 값)만 저장한다.
 from collections import defaultdict
-dct=defaultdict(lambda :100)
-v1=dct['a1']
+
+dct = defaultdict(lambda: 100)
+v1 = dct['a1']
 print(v1)
