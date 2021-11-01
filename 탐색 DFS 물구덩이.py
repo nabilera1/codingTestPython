@@ -1,3 +1,6 @@
+# https://docs.google.com/document/d/17ORr3kIlWwGnrEhOkcnIq9EvJVOoUVHinuDrMcxO6yU/edit?usp=sharing
+# 문제 설명 있음
+
 n,m=map(int, input().split())
 graph=[]
 for i in range(n):

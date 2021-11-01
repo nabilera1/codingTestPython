@@ -1,3 +1,5 @@
+#dfs 설명 먼저 하기
+
 def dfs(graph, v, visited):
     visited[v]=True
     print(v,end=' ')
