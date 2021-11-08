@@ -1,9 +1,9 @@
-from collections import deque
-def bfs(graph,start,visited):
+from collections import deque # double ended queue
+def bfs(start):
     queue=deque([start])
     visited[start]=True
     while queue:
-        v=queue.popleft()
+        v=queue.popleft() # 큐 왼쪽 값을 꺼냄
         print(v, end=' ')
         for i in graph[v]:
             if not visited[i]:
@@ -22,4 +22,5 @@ graph=[
     [1,7]
 ]
 visited=[False]*9
-bfs(graph,1,visited)
+# visited=[0]*9
+bfs(1)

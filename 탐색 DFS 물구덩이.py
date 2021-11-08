@@ -17,7 +17,7 @@
 
 
 # 5 5
-# 00110
+# 00110   ===> [0, 0, 1, 1, 0]
 # 00010
 # 11111
 # 00001
@@ -33,17 +33,17 @@ for i in range(n):
 def puddle(x, y):
     if x <= -1 or x >= n or y <= -1 or y >= m:
         return False
-    if graph[x][y] == 0:
+    if graph[x][y] == 0:  # 0, 0
         graph[x][y] = 1
-        puddle(x - 1, y)
-        puddle(x, y - 1)
-        puddle(x + 1, y)
-        puddle(x, y + 1)
+        puddle(x - 1, y)   # puddle(-1, 0)
+        puddle(x, y - 1)   # puddle(0, -1)
+        puddle(x + 1, y)   # puddle(1, 0)
+        puddle(x, y + 1)   # puddle(0, 1)
         return True
     return False
 
 
-cnt = 0
+cnt = 0 #물웅덩이 개수
 for i in range(n):
     for j in range(m):
         if puddle(i, j) == True:
