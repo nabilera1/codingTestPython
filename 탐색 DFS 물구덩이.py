@@ -25,22 +25,23 @@
 # 3
 
 n, m = map(int, input().split())
-graph = []
+graph = []  # 빈 리스트 선언, 빈 배열 선언
 for i in range(n):
     graph.append(list(map(int, input())))
 
 
-def puddle(x, y):
+def puddle(x, y): # 물웅덩이 갯수 체크
     if x <= -1 or x >= n or y <= -1 or y >= m:
         return False
-    if graph[x][y] == 0:  # 0, 0
+    if graph[x][y] == 0:  # 물웅덩이이면...
         graph[x][y] = 1
         puddle(x - 1, y)   # puddle(-1, 0)
         puddle(x, y - 1)   # puddle(0, -1)
         puddle(x + 1, y)   # puddle(1, 0)
         puddle(x, y + 1)   # puddle(0, 1)
         return True
-    return False
+    else:
+        return False
 
 
 cnt = 0 #물웅덩이 개수
@@ -49,3 +50,4 @@ for i in range(n):
         if puddle(i, j) == True:
             cnt += 1
 print(cnt)
+
