@@ -25,7 +25,7 @@
 # 3
 
 n, m = map(int, input().split())
-graph = []  # 빈 리스트 선언, 빈 배열 선언
+graph = []  # 빈 리스트 선언
 for i in range(n):
     graph.append(list(map(int, input())))
 
