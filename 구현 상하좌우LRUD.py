@@ -8,13 +8,14 @@
 # U : 위 한 칸 이동
 # D : 아래 한 칸 이동
 #
-# 입력
-# 5
+# 입력 (맵 크기 N, 이동 명령 개수 C)
+# 5 6
 # R R R U D D
 # 출력
 # 3 4
 #
-n = int(input())
+n, c = map(int, input().split())
+#c는 파이선에서 무시
 x, y = 1, 1
 moveCmd = input().split()
 dx = [0, 0, -1, 1]
