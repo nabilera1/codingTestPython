@@ -12,30 +12,30 @@ import numpy as np
 plt.ion()
 fig = plt.figure()
 i=0
-x=list()
-y=list()
+val=[0 for i in range(0,20)]
+y_val=[i for i in range(0,40)]
+x=list(val)
+y=list(val)
+# print(x)
+# print(y)
+# input()
 i=0
 ser = serial.Serial('COM7',9600)
 ser.close() # 아두이노 등에서 열린 시리얼포트 닫기
 ser.open()
 while True:
     data = ser.readline()
-    #data=(ser.readline()[2:].decode("utf-8")).strip()
-    #data=ser.readline().strip()
-    #data=ser.readline().strip().decode()
-   # print(data.decode())
     x.append(i)
-    #y.append(data.decode())
     y.append(data)
-
     plt.scatter(i, float(data))
+    plt.plot(x, y)
+    #y축에 온도에 맞게 값이 출력되도록 수정
+    plt.xlabel('Time')
+    plt.ylabel('Temp')
+    plt.title('STEAM')
     i+=1
+    plt.legend()
     plt.show()
     plt.pause(0.0001)
 
 
-
-#Traceback (most recent call last):
-# File "C:\Users\user\PycharmProjects\codingTestPython\steam 학습코드\serial 학습.py", line 23, in <module>
-#   print(data.decode())
-#UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb0 in position 20: invalid start byte

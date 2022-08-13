@@ -12,7 +12,14 @@
 
 # visited = [0] * 9
 # print(visited)
-a=1
-b=2
-n=lambda a, b: a+b
-print(n(a,b))
+'''
+a = 1
+b = 2
+n = lambda a, b: a + b
+print(n(a, b))
+'''
+a = 1
+b = 2
+sum = lambda a, b: \
+    a + b
+print('sum =',sum(a, b))
