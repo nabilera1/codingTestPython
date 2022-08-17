@@ -20,7 +20,7 @@ y=list(val)
 # print(y)
 # input()
 i=0
-ser = serial.Serial('COM7',9600)
+ser = serial.Serial('COM7', 9600)
 ser.close() # 아두이노 등에서 열린 시리얼포트 닫기
 ser.open()
 while True:
