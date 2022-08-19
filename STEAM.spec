@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(
-    ['C:\\Users\\user\\PycharmProjects\\codingTestPython\\STEAM', '스팀', '시각화', '아두이노.py'],
+    ['C:\\Users\\user\\PycharmProjects\\codingTestPython\\steam', '학습코드\\그래프', '그리기.py'],
     pathex=[],
     binaries=[],
     datas=[],
@@ -28,7 +28,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='STEAM',
+    name='steam',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
