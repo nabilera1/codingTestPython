@@ -1,6 +1,6 @@
 import numpy as np
-max_points=50
-print(np.arange(max_points))
+n=50
+print(np.arange(n))
 
 # import numpy as np
 np.arange(30)  #0~29 값이 저장된 30개 공간의 Array
