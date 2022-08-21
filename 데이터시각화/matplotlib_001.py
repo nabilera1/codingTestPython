@@ -28,4 +28,34 @@
 # # 소스코드와 같은 폴더에 저장
 # plt.show()
 
+'''
+==========
+plot(x, y)
+==========
+
+See `~matplotlib.axes.Axes.plot`.
+The NumPy linspace function (sometimes called np. linspace)
+is a tool in Python for creating numeric sequences.
+It's somewhat similar to the NumPy arange function
+'''
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+plt.style.use('_mpl-gallery') #격자 표시
+
+# make data
+x = np.linspace(0, 10, 100)
+y = 4 + 2 * np.sin(2 * x)
+
+# plot
+fig, ax = plt.subplots()
+
+ax.plot(x, y, linewidth=2.0)
+
+ax.set(xlim=(0, 8), xticks=np.arange(1, 8),
+       ylim=(0, 8), yticks=np.arange(1, 8))
+
+plt.show()
 
