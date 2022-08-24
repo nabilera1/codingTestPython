@@ -9,10 +9,10 @@ print('2)', arr)
 print(type(arr))
 # arr = np.array([1, 'k', "t", 3], float)
 
-li = [1, 'a', True, [3, 4, 5]]
-print(li)
-arr = np.array(li, dtype=object)
-print(arr)
+# li = [1, 'a', True, [3, 4, 5]]
+# print(li)
+# arr = np.array(li, dtype=object)
+# print(arr)
 
 
 # '''
