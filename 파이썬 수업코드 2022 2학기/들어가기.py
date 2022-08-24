@@ -5,7 +5,14 @@ print('123*456 =', end=' ')
 print(123*456)
 print('2^500=', 2**500)
 print(f'2^500= {2**500}')
+#########
+print('a+b=', a + b)
+print(f'a+b= {a * b}')
+print(f'a+b= ', end='')
+print(a+b)
 
+
+##########
 a=4.24E10
 print(a)
 b=0x8ff
