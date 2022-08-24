@@ -22,4 +22,8 @@ a = 1
 b = 2
 sum = lambda a, b: \
     a + b
-print('sum =',sum(a, b))
+print('sum =', sum(a, b))
+
+print(a)
+
+
