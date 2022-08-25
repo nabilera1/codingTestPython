@@ -1,14 +1,18 @@
-a=2
-b=2*2*2*2*2
-print(b)
-print(a**5)
-print(f'결과는 {2**100000}')
+txt='Life is too short, ' \
+    'You need python'
+print(txt)
+txt="Life is " \
+    "too short, " \
+    "You need python"
+print(txt)
+txt='''Life is 
+too short, 
+You need python'''
+print(txt)
 
-a=4.24e10
-print(a)
-c=0xff #11111111
-print(c)
-
-d=20
-e=int(str(d), 16)  #20이 16진수다.
-print(e)
+'''
+여러 줄 주석은 홑따옴표 3개를 사용
+개발일자 : 2022년 8월 25일
+개발자 : 귀도 반 로섬
+# 한 줄 주석
+'''

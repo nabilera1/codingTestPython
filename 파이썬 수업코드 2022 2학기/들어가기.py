@@ -22,3 +22,5 @@ d = int(str(c), 16)  # 16진수로 저장
 print(d)  # 10진수로 출력
 print(int('20', 8))
 print(int('0x8ff', 16))
+a=8//3
+b=8%3
