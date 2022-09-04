@@ -1,0 +1,13 @@
+pencil = int(input('연필의 판매 개수는? '))
+eraser = int(input('지우개의 판매 개수는? '))
+notebook = int(input('공책의 판매 개수는? '))
+print('-' * 30)
+print('파이썬 문방구의 오늘 판매 내역')
+print('-' * 30)
+print(f'1. 연필 : {pencil} 개, {pencil * 700} 원')
+print(f'2. 지우개 : {eraser} 개, {eraser * 500} 원')
+print(f'3. 공책 : {notebook} 개, {notebook * 2500} 원')
+print('-' * 30)
+ans = pencil * 700 + eraser * 500 + notebook * 2500
+print(f'오늘 총 판매 금액 : {ans}원')
+print('-' * 30)
