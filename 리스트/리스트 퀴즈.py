@@ -7,31 +7,55 @@ You will have to read all the given answers and click over the correct answer.
 Read the guide on Python Lists to solve this quiz.
 
 '''
+print(2 ** 365)
 
 # 리스트의 내용을 출력할 때 각 요소별 /를 넣어서 출력하시오.
+data = 'korea'  # ['korea'] 와 차이점
+print(','.join(data))
+
+data = ["I", "like", "Coding"]
+print("-".join(data))
 
 data = ["Hello", "Python", "Coding"]
 # [출력 예시]
 # Hello/Python/Coding
 print("/".join(data))
 
+num = [10, 20, 30, 40]
+num.pop()
+print(num)
+
 # 샘플에서 숫자를
 num = [10, 20, 30, 40, 50, 60, 70, 80]
 num.pop()
 print(num)
+
+print('-' * 30)
+li = [5, 2, 7, 3]
+li.sort()
+print(li[0])
 
 num.pop(2)
 print(num)
 
 # What is the output of the following code
 
-list1 = ['xyz', 'zara', 'PYnative']
+list1 = ['tiger', 'zibra', 'Python']
 print(max(list1))
 
 # What is the output of the following list comprehension
 
-resList = [x + y for x in ['Hello ', 'Good '] for y in ['Dear', 'Bye']]
-print(resList)
+d = [x + 5 for x in [1, 2, 3]]
+print(d)
+# [6, 7, 8]
+d = [x + y for x in [1, 2, 3] for y in [5, 6]]
+# print(d)
+# [6, 7, 7, 8, 8, 9]
+print('sum=', sum(d))
+
+
+d = [x + y for x in ['My ', 'Your '] for y in ['Love', 'Destiny']]
+print(d[1])
 
 # What is the output of the following list function?
 
