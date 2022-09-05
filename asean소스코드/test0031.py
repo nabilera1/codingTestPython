@@ -1,0 +1,11 @@
+#파이썬 자료구조 (튜플)
+what_day=("Mon","Tue","Wed","Thu","Fri","Sat","Sun")
+print(what_day)
+print(len(what_day))
+print(what_day[1])
+print(what_day[2])
+print(what_day[4])
+# what_day[4]="My day"
+print(what_day.index('Sun')+1,'번째 있습니다.')
+# print(what_day.index('Sun'))
+# print(what_day.index('sun')+1,'번째 있습니다.')
