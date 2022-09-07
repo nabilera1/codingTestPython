@@ -56,3 +56,8 @@
 # print(str.strip())
 # a = 'I like bananas. You like bananas.'
 # print(a.replace('banana', 'apple'))
+a = [1, 2, 3]
+b = [5, 6, 7]
+print(a + b)
+print(b + a)
+
