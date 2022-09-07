@@ -31,15 +31,19 @@
 # TypeError: '<' not supported between instances of 'int' and 'str'
 
 # https://stackoverflow.com/questions/21095654/what-is-a-nonetype-object
-a = [1, 2, 3]
-print(a.insert(0, 4))
-print(type(a.insert(0, 4)))
-print(a)
-print(a.insert(4, 5))
-print(a)
-print(a.insert(9, 5))  # 범위가 벗어난 인덱스
-print(a)
-print(a.insert(9, 5))
-print(a)
+# a = [1, 2, 3]
+# print(a.insert(0, 4))
+# print(type(a.insert(0, 4)))
+# print(a)
+# print(a.insert(4, 5))
+# print(a)
+# print(a.insert(9, 5))  # 범위가 벗어난 인덱스
+# print(a)
+# print(a.insert(9, 5))
+# print(a)
 
 
+print(1,2,3,4)
+print(1,2,3,4, sep='@')
+print([1,2,3,4])
+print([1,2,3,4], sep='@')
