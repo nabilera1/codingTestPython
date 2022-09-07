@@ -4,16 +4,34 @@ sorted(list) : list 원본은 그대로 두고 정렬된 리스트 값을 리턴
 
 '''
 
-a1 = [4, 3, 2]
-print('a1:', a1)
-a2 = a1.sort() # 원본을 정렬하고 수정합니다(in-place)
+nums = [1, 4, 3, 2]
+print('1:', nums)
+newNums = nums.sort()  # 원본을 정렬하고 수정합니다(in-place)
 print('-----정렬 후-----')
-print('a1:', a1)
-print('a2:', a2)
+print('2:', nums)
+print('3:', newNums)
 
-b1 = [4, 3, 2]
-print('b1:', b1)
-b2 = sorted(b1) # 원본은 유지하고 정렬한 새 리스트를 만듭니다
+nums1 = [1, 4, 3, 2]
+print('\n1:', nums1)
+newNums1 = sorted(nums1)  # 원본은 유지하고 정렬한 새 리스트를 만듭니다
 print('-----정렬 후-----')
-print('b1:', b1)
-print('b2:', b2)
+print('2:', nums1)
+print('3:', newNums1)
+
+'''
+sort(reverse=True) : 오름차순, 내림차순
+reverse() : 순서 뒤집기
+'''
+nums = [1, 4, 3, 2]
+print('\n1:', nums)
+newNums = nums.sort(reverse=True)  # 원본을 정렬하고 수정합니다(in-place)
+print('-----내림 차순 정렬 후-----')
+print('2:', nums)
+print('3:', newNums)
+
+nums = [1, 4, 3, 2]
+print('\n1:', nums)
+newNums = nums.reverse()  # 정렬이 아닌 뒤집기이고 수정합니다(in-place)
+print('-----reverse 후-----')
+print('2:', nums)
+print('3:', newNums)
