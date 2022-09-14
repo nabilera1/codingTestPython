@@ -43,7 +43,26 @@
 # print(a)
 
 
-print(1,2,3,4)
-print(1,2,3,4, sep='@')
-print([1,2,3,4])
-print([1,2,3,4], sep='@')
+# print(1,2,3,4)
+# print(1,2,3,4, sep='@')
+# print([1,2,3,4])
+# print([1,2,3,4], sep='@')
+# lst = ['Apple', 'Banana', 'Mango']
+# print( ' + '.join(lst) )
+
+# nn = []
+# for n in range(1, 10):
+#     nn.append(n)
+# print(nn)
+#
+#
+# # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+#
+# print([nn for n in range(1,10)])
+# nn=[x for x in range(10)]
+# print(nn)
+# print([x for x in range(10)])
+
+# lst=['Apple','Banana','Orange']
+# print([f'{x}s' for x in lst])
+print([f'{x}s' for x in ['A','B','C']])
