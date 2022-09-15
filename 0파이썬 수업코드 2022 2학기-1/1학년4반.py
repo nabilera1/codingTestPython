@@ -46,3 +46,19 @@ b = [5, 6, 7]
 print(len(a))
 # print(a * b)
 # TypeError: can't multiply sequence by non-int of type 'list'
+
+
+# money = 2000
+# card = True   # true TRUE
+# if money >= 3000 or card:
+#     print('택시')
+# else:
+#     print('조깅')
+
+
+# print('a' in 'python')
+# print('t' in 'python')
+i = 1
+while i < 6:
+    print('*' * i)
+    i += 1

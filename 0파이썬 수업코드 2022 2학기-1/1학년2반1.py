@@ -34,5 +34,27 @@
 # print(a[-1][0])
 # print(a[-1][-3])
 
-arr = [1, 2, ['a', 'b', ['Life', 'is']]]
-print(a[2][2][0][2])
+# arr = [1, 2, ['a', 'b', ['Life', 'is']]]
+# print(a[2][2][0][2])
+
+# list1 = ['c', 't', 'a', 'b']
+# print(list1)
+# list1.sort()
+# print(list1)
+# # print(list1.reverse())
+# list1.reverse()
+# print(list1)
+# 숫자 10 이하에서 5보다 작고 짝수인 것을 출력하는 코드를 작성
+# i=[]
+# print([i for n in range(11) if n < 5 and n % 2 == 0])
+
+i = 0
+sum = 0
+while i < 1001:
+    i = i + 1
+    if i % 3 == 0:
+        sum += i
+
+# print(sum)
+a = [n for n in range(1001) if n % 3 == 0]
+print(sum(a))
