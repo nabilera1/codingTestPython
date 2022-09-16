@@ -66,3 +66,4 @@
 # lst=['Apple','Banana','Orange']
 # print([f'{x}s' for x in lst])
 print([f'{x}s' for x in ['A','B','C']])
+# print(f'{x}s' for x in ['A','B','C'])
