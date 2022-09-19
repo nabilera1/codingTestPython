@@ -17,4 +17,4 @@
 # print(arr[-1])
 # print(arr[2])
 
-print([x**2 for x in [1,2,3]])
+# print([x**2 for x in [1,2,3]])
