@@ -41,9 +41,9 @@
 # a = 'Life/is/Good'
 # print(a.split('/'))
 
-a = [1, 2, 3]
-b = [5, 6, 7]
-print(len(a))
+# a = [1, 2, 3]
+# b = [5, 6, 7]
+# print(len(a))
 # print(a * b)
 # TypeError: can't multiply sequence by non-int of type 'list'
 
@@ -58,7 +58,33 @@ print(len(a))
 
 # print('a' in 'python')
 # print('t' in 'python')
-i = 1
-while i < 6:
-    print('*' * i)
-    i += 1
+# i = 1
+# while i < 6:
+#     print('*' * i)
+#     i += 1
+#
+# a = range(10)
+# print(a)
+# a = range(1, 10)
+# print(a)
+# # 리스트에 1~10까지의 내용을 담아서 출력하시오.
+# # [1,2,3,4,....,10]
+# a = list(range(1,11))
+# print(a)
+# print(*a)
+#
+# print(*(range(1, 101)))
+# print(sum(range(1, 101)))
+# print(f'{"구구단":-^20}')
+# li = list(range(1, 101))
+# # 각 요소에서 3의 배수를 뽑고 그것의 세제곱의 총합을 구하여 출력하시오.
+# print(sum([n ** 3 for n in li if n % 3==0]))
+# # 8497467
+#
+# print(type(1))
+# print(type((1)))
+# print(type((1,)))
+a = {1: 'a'}
+key, val = input().split()
+a[key] = val
+print(a)
