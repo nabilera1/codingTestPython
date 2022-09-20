@@ -37,9 +37,22 @@
 # print('my food : %s' % food)
 # print(f'my food : {food}')
 # print('my food : {}'.format(food))
-a = [1, 2, 3]
-a.append([4, 5])
-print(a)
-a = a + [6]
-print(a)
+# a = [1, 2, 3]
+# t1=(1)
+# print(t1)
+# print(type(t1))
+#
+# t1=(1,)
+# print(t1)
+# print(type(t1))
+#
+# t1=1,
+# print(t1)
+# print(type(t1))
 
+d = {1: 'a', 2: 'b'}
+print(d.get(1))
+print(d[1])
+
+dd = {'name':'pey', 'phone':'0119993323', 'birth': '1118'}
+print(dd.get('name'))

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CsvFileAttributes">
+    <option name="attributeMap">
+      <map>
+        <entry key="D:\백업 대구소프트웨어마이스터고 교무실 내컴퓨터\데이터과학 제작 중\2단원-2019년도\2단원\2단원에서 사용된 csv 파일(모음)\2019_03_Daegu_Average_Temperature.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="D:\백업 대구소프트웨어마이스터고 교무실 내컴퓨터\데이터과학 제작 중\2단원-2019년도\2단원\2단원에서 사용된 csv 파일(모음)\2019_03_Daegu_Sunshine_Cloudiness.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="D:\백업 대구소프트웨어마이스터고 교무실 내컴퓨터\데이터과학 제작 중\2단원-2019년도\2단원\2단원에서 사용된 csv 파일(모음)\2019_05_Daegu_Sunshine_Cloudiness.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="D:\백업 대구소프트웨어마이스터고 교무실 내컴퓨터\데이터과학 제작 중\2단원-2019년도\2단원\2단원에서 사용된 csv 파일(모음)\2019_3월_대구광역시_평균기온.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="D:\백업 대구소프트웨어마이스터고 교무실 내컴퓨터\데이터과학 제작 중\2단원-2019년도\2단원\2단원에서 사용된 csv 파일(모음)\data\population_2019.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="D:\백업 대구소프트웨어마이스터고 교무실 내컴퓨터\데이터과학 제작 중\2단원-2019년도\2단원\2단원에서 사용된 csv 파일(모음)\data\toilet_2019.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\판다스\temp_steam.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

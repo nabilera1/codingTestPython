@@ -1,5 +1,5 @@
 import pandas as pd
-df=pd.read_csv('temp_steam.csv', encoding='cp949') #utf-8
+df=pd.read_csv('../csv/temp_steam.csv', encoding='cp949') #utf-8
 print(type(df))
 
 # print(df.shape)
