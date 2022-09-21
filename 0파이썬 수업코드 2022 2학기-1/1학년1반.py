@@ -56,9 +56,20 @@
 # print(str.strip())
 # a = 'I like bananas. You like bananas.'
 # print(a.replace('banana', 'apple'))
-a = [1, 2, 3]
-b = [5, 6, 7]
-print(a + b)
-print(b + a)
+# a = [1, 5, 3]
+# sorted(a) #정렬된 것이 자기자신에게 반영이 안됨.
+# print(a)
+#
+# a.sort()
+# print(a)
 
-퀴즈앤 부터 시작하기
+# # score = 80
+# score = int(input())
+# # if score >= 60:
+# #     res = '축하'
+# # else:
+# #     res = '으이구~'
+# res = '축하' if score >= 60 else '이이구~'
+# print(res)
+print(*range(1, 101))
+print(*list(range(1, 101)))

@@ -26,9 +26,9 @@
 # {n1 + n2:>10}''')
 # print('=' * 10)
 
-a = '개울가에 소년이 나타났다. 소녀는 개울가를 건너고자 한다.'
-print(a.count(' '))
-print(a.replace(' ',''))
+# a = '개울가에 소년이 나타났다. 소녀는 개울가를 건너고자 한다.'
+# print(a.count(' '))
+# print(a.replace(' ',''))
 # print(a.replace('개울가', 'PC방'))
 # a = a.replace('개울가', 'PC방')
 # print(a)
@@ -39,6 +39,9 @@ print(a.replace(' ',''))
 # print('청소년 검색 : ', a.index('청소년'))
 
 
-
 # 소년은 6번째에 나옵니다.
 # print(f"소년은 {a.find('소년')+1}번째에 나옵니다.")
+a = [1, 2, 3]
+a.append(4)
+a.append(5)
+print(a)
