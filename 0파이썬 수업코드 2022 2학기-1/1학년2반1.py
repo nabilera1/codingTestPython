@@ -48,13 +48,34 @@
 # i=[]
 # print([i for n in range(11) if n < 5 and n % 2 == 0])
 
-i = 0
-sum = 0
-while i < 1001:
-    i = i + 1
-    if i % 3 == 0:
-        sum += i
+# i = 0
+# sum = 0
+# while i < 1001:
+#     i = i + 1
+#     if i % 3 == 0:
+#         sum += i
+#
+# # print(sum)
+# a = [n for n in range(1001) if n % 3 == 0]
+# print(sum(a))
 
-# print(sum)
-a = [n for n in range(1001) if n % 3 == 0]
-print(sum(a))
+# print(*range(1, 101))
+# print(list(range(1, 101)))
+# print(*list(range(1, 101)))
+# #1에서 100까지 총합이 출력됨.
+# print(sum(list(range(1, 101))))
+
+#구구단 출력
+
+for i in range(1,10):
+    for j in range(2, 10):
+        print(f'{j} x {i} = {j*i:<3}', end=' ')
+        # print(f'{j} x {i} = {j*i:<2}', end=' ')
+    print()
+
+
+
+
+
+
+
