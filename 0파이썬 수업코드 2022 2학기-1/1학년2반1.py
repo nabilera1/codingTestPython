@@ -67,12 +67,12 @@
 
 #구구단 출력
 
-# for i in range(1,10):
-#     for j in range(2, 10):
-#         print(f'{j} x {i} = {j*i:<3}', end=' ')
+# for i in range(2,10):
+#     for j in range(1, 10):
+#         print(f'{j} x {i} = {j*i:>2}', end='  ')
 #         # print(f'{j} x {i} = {j*i:<2}', end=' ')
 #     print()
-#
+
 # t = 1
 # print(type(t))  # <class 'int'>
 # t = (1)
@@ -82,9 +82,11 @@
 # t = (1,)
 # print(type(t))
 
+#
+# a={}
+# print(type(a)) # <class 'dict'>
 
-a={}
-print(type(a)) # <class 'dict'>
 
 
-
+s2 = set("Hello")
+print(s2)
