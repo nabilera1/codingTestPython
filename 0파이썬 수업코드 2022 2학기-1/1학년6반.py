@@ -41,7 +41,28 @@
 
 # 소년은 6번째에 나옵니다.
 # print(f"소년은 {a.find('소년')+1}번째에 나옵니다.")
-a = [1, 2, 3]
-a.append(4)
-a.append(5)
-print(a)
+# a = (1, 2, 3)
+# print(id(a))
+# a = a + (6,)
+# a = (1, 2, 3, 6)
+# # a[2] = 6
+#
+# print(id(a))
+# # print(a+6)
+#
+# a = a + (6,)
+# print(a)
+# print(a[:3])
+
+d = {}
+print(d)
+d[1] = '김시영'
+d[2] = '김유신'
+print(d)
+# n = int(input('번호 : '))
+# print(d[n])
+n = int(input('추가할 학생 번호 : '))
+name = input('학생 이름 : ')
+d[n] = name
+print(d)
+print(d[15])

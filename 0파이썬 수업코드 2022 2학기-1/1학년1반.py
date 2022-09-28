@@ -71,5 +71,29 @@
 # #     res = '으이구~'
 # res = '축하' if score >= 60 else '이이구~'
 # print(res)
-print(*range(1, 101))
-print(*list(range(1, 101)))
+# print(*range(1, 101))
+# print(*list(range(1, 101)))
+#
+# a = (1, 2, 3)
+# print(type(a))   # <class 'tuple'>
+# print(id(a))     # 2264152697056
+# b = 1,    # tuple
+# print(id(b))    # 3035229195760
+# a = a + (6,)    # 튜플 추가 덧셈 연산은 에러가 아님.
+# print(a)
+# print(id(a))  # 2264152697056
+#
+# a = (1, 2, 3, 6)
+# a = a + 6  # 정수와의 + 연산은 에러 발생
+# # TypeError: can only concatenate tuple (not "int") to tuple
+# print(a)
+
+my_class = {1: '공혜민', 2: '권성재'}
+print(type(my_class))
+print(my_class)
+my_class[3] = '김민성'  # 추가하기
+print(my_class)
+num = int(input('번호 입력 : '))
+name = my_class[num]
+print(f'학생 이름 : {name} 입니다.')
+# 딕셔너리 my_class에 전학생 학번과 이름을 입력받아 1명 추가하고 전체 학생 명단을 출력하시오.
