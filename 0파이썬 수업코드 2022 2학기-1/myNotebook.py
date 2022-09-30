@@ -9,15 +9,24 @@
 arr에 있는 내용을 차례대로 출력한다.
 '''
 
-arr=list()
-print(type(arr))
-print(arr)
+# arr=list()
+# print(type(arr))
+# print(arr)
+#
+# # arr.append()
+# data=input().split()
+# # data=map(int, input().split())
+# arr.extend(data)
+# print(arr)
+# print(*arr)
+# for i in arr:
+#     print(i, end=' ')
 
-# arr.append()
-data=input().split()
-# data=map(int, input().split())
-arr.extend(data)
-print(arr)
-print(*arr)
-for i in arr:
-    print(i, end=' ')
+
+number = None
+number = 0
+
+if number is None:
+    print("PEP 8 Style Guide prefers this pattern")
+
+    
