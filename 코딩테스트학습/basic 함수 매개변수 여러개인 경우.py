@@ -11,4 +11,5 @@ def add_mul(*args):
 
 
 print(add_mul('add', 1, 2, 3))
-print(add_mul('add', 1, 2, 3, 4, 5))
+print(add_mul('add', 2, 3, 4, 5, 6))
+print(add_mul('mul', 4, 2, 3))

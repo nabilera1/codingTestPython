@@ -1,5 +1,5 @@
 # def Hello():
-#     print('Hello' * 5)
+#     print('Hello ' * 5)
 #
 # Hello()
 
@@ -13,6 +13,8 @@
 # for i in range(1,101):
 #     cnt+=str(i).count('3')
 # print(cnt)
-for i in range(1,101,2):
-    print(i, end=' ')
-
+# for i in range(1,101,2):
+#     print(i, end=' ')
+#
+mysum = lambda n: sum([int(x) for x in str(n)])
+print("mysum():", mysum(111))
