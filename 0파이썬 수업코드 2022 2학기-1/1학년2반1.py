@@ -1,160 +1,207 @@
-# a = '개울가에 소년이 나타났다. 소녀는 개울가를 건너고자 한다.'
-# print(a.count('개울가'))
-# # print(a.count(' '))
-# # 소년 - > 준규
-# # print(a.replace('소년', '준규'))
-# # a = a.replace('소년', '준규')
-# # print(a)
-# # find     index
-# print(f"소년은 {a.find('소년')+1}번째 있습니다.")
-# print(a.find('철수'))
-# print(a.index('철수'))
+import random
 
-# a = ','.join('abcd')
-# print(a)
-# print(type(a))
-# # print(type(''))
+행맨그림 = [
 
-# Yes / No ?   Yes  yEs yes YES yes1
-# a = input('Yes / No ?')
-# a = a.upper()  # 대문자  lower() 소문자
-# print(a)
+    '''
+  +---+
 
-#
-# a = 'Life is Good'
-# print(a.split())
-# a = 'Life/is/Good'
-# print(a.split('/'))
+  |   |
 
+      |
 
-# a = [1, 2, 3, ['a', 'b', 'c']]
-# print(a[-1])
-# print(a[3])
-# print(a[3][0])
-# print(a[-1][0])
-# print(a[-1][-3])
+      |
 
-# arr = [1, 2, ['a', 'b', ['Life', 'is']]]
-# print(a[2][2][0][2])
+      |
 
-# list1 = ['c', 't', 'a', 'b']
-# print(list1)
-# list1.sort()
-# print(list1)
-# # print(list1.reverse())
-# list1.reverse()
-# print(list1)
-# 숫자 10 이하에서 5보다 작고 짝수인 것을 출력하는 코드를 작성
-# i=[]
-# print([i for n in range(11) if n < 5 and n % 2 == 0])
+      |
 
-# i = 0
-# sum = 0
-# while i < 1001:
-#     i = i + 1
-#     if i % 3 == 0:
-#         sum += i
-#
-# # print(sum)
-# a = [n for n in range(1001) if n % 3 == 0]
-# print(sum(a))
+=========''',
 
-# print(*range(1, 101))
-# print(list(range(1, 101)))
-# print(*list(range(1, 101)))
-# #1에서 100까지 총합이 출력됨.
-# print(sum(list(range(1, 101))))
+    '''
+  +---+
 
-# 구구단 출력
+  |   |
 
-# for i in range(2,10):
-#     for j in range(1, 10):
-#         print(f'{j} x {i} = {j*i:>2}', end='  ')
-#         # print(f'{j} x {i} = {j*i:<2}', end=' ')
-#     print()
+  O   |
 
-# t = 1
-# print(type(t))  # <class 'int'>
-# t = (1)
-# print(type(t))
-# t = 1,
-# print(type(t))  # <class 'tuple'>
-# t = (1,)
-# print(type(t))
+      |
 
-#
-# a={}
-# print(type(a)) # <class 'dict'>
+      |
 
+      |
 
-#
-# s2 = set("Hello")
-# # print(s2)
-#
-# l1 = [1, 2, 3, 4, 5, 6, 3, 4]
-# l2 = [4, 5, 6, 7, 8, 9, 8]
-# s1 = set(l1)
-# s2 = set(l2)
-# print(s1)
-# print(s2)
-# # 교집합, intersection, &
-# print(f'교집합 : {s1.intersection(s2)}')
-# print(f'교집합 : {s1 & s2}')
-# # 합집합, union, |
-#
-# # 차집합, difference, -
+=========''',
 
-# 집합 자료형의 함수
-# s1 = {1, 2, 3}
-# print(type(s1))
-# s1 = s1 | {4}  # + 은 에러
-# print(s1)
-#
-# s1.add(5)
-# print(s1)
-#
-# s1.update([6, 7, 8])
-# print(s1)
-#
-# s1.discard(7)  # remove, discard로 바꿔 실행해보세요.
-# print(s1)
-# s1.discard(7)
-# print(s1)
+    '''
+  +---+
 
-# # bool a = True # C++ 스타일, 파이썬은 안됨.
-# # SyntaxError: invalid syntax. Perhaps you forgot a comma?
-# a = True
-# print(a)
-# print(type(a))
-# a = 1
-# print(a)
-# print(type(a))
-# a = [1]
-# print(id(a))
-# a = [1, 2, 3]
-# print(id(a))
-# b = a
-# print(id(b))
-# a, b = 5, 3
-# print(a, b)
-# a, b = b, a
-# print(a, b)
+  |   |
 
-def add_mul(ch, *args):
-    print(type(args))
-    if ch == 'add':
-        result = 0
-        for i in args:
-            result = result + i
-    elif ch == 'mul':
-        result = 1
-        for i in args:
-            result = result * i
-    return result
+  O   |
+
+  |   |
+
+      |
+
+      |
+
+=========''',
+
+    '''
+  +---+
+
+  |   |
+
+  O   |
+
+ /|   |
+
+      |
+
+      |
+
+=========''',
+
+    '''
+  +---+
+
+  |   |
+
+  O   |
+
+ /|\  |
+
+      |
+
+      |
+
+=========''',
+
+    '''
+  +---+
+
+  |   |
+
+  O   |
+
+ /|\  |
+
+ /    |
+
+      |
+
+=========''',
+
+    '''
+  +---+
+
+  |   |
+
+  O   |
+
+ /|\  |
+
+ / \  |
+
+      |
+
+=========''']
+
+words = 'ant baboon badger bat bear beaver camel cat clam cobra \
+cougar coyote crow deer dog donkey duck eagle ferret fox frog \
+goat goose hawk lion lizard llama mole monkey moose mouse mule \
+newt otter owl panda parrot pigeon python rabbit ram rat raven \
+rhino salmon seal shark sheep skunk sloth snake spider stork swan \
+tiger toad trout turkey turtle weasel whale wolf wombat zebra'.split()
 
 
-print(add_mul('add', 1, 2, 3))
-print(add_mul('add', 1, 2))
-n = list(map(int, input().split()))
-print(n)
-print(add_mul('add', n[0], n[1]))
+def 행맨게임소개():
+    print('*' * 30)
+    print('행맨게임을 시작합니다.')
+    print('숨겨진 단어를 맞춰보세요.')
+    print('행운을 빕니다.')
+    print('*' * 30)
+
+
+def 비밀단어생성(words):
+    n = random.randint(0, len(words) - 1)
+    return words[n]
+
+
+def 게임화면생성(행맨그림, 틀린단어, 맞춘단어, 비밀단어):
+    # print(행맨그림[0])
+    print(행맨그림[len(틀린단어)])
+    print()
+    print('틀린 단어 표시: ', end=' ')
+    for i in 틀린단어:
+        print(i, end=' ')
+    print()
+    밑줄 = '_' * len(비밀단어)
+    for i in range(len(비밀단어)):
+        if 비밀단어[i] in 맞춘단어:
+            밑즐 = 밑줄[ :i]+비밀단어[i]+밑줄[i+1: ]
+    for i in 밑줄:
+        print(i, end =' ')
+    print()
+
+def 맞추기도전(먼저맞춘것):
+    while True:
+        guess = input('글자를 입력하세요 :')
+        guess = guess.lower()
+        if len(guess) != 1:
+            print('1 글자만 입력하세요 ')
+        elif guess in 먼저맞춘것:
+            print(' 그 글자는 먼저 맞추신 글자입니다. 다시 입력하세요.')
+        elif guess not in 'abcdefghijklmnopqrstuvwxyz':
+            print('알파벳을 입력하세요.')
+        else:
+            return guess
+
+def 게임재실행():
+    print('다시 게임하실래요? (yes or no)')
+    return input().lower().startswith('y')
+
+###### 게임 실행 ##########
+행맨게임소개()
+틀린단어=''
+맞춘단어=''
+비밀단어=비밀단어생성(words)
+# print(비밀단어)
+게임종료=False
+
+while True:
+    게임화면생성(행맨그림, 틀린단어, 맞춘단어, 비밀단어)
+    guess = 맞추기도전(틀린단어 + 맞춘단어)
+    if guess in 비밀단어:
+        맞춘단어 = 맞춘단어 + guess
+
+        모두맞춤 = True
+        for i in range(len(비밀단어)):
+            if 비밀단어[i] not in 맞춘단어:
+                 모두맞춤 = False
+                 break
+        if 모두맞춤:
+            print('축하합니다. ' + 비밀단어 + ' 당신이 이겼어요.')
+            게임종료 = True
+    else:
+        틀린단어 = 틀린단어 + guess
+        if len(틀린단어) == len(행맨그림) -1 :
+            게임화면생성(행맨그림, 틀린단어, 맞춘단어, 비밀단어)
+            print('맞출 기회를 다 놓쳤어요.')
+            print(str(len(틀린단어))+ '번 틀림')
+            print(str(len(맞춘단어))+ '번 맞춤')
+            print('비밀단어는 ' + 비밀단어)
+            게임종료 = True
+
+    if 게임종료:
+        if 게임재실행():
+            틀린단어=''
+            맞춘단어=''
+            게임종료=False
+            비밀단어=비밀단어생성(words)
+        else:
+            break
+
+
+
+

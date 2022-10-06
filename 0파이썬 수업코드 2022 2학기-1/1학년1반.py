@@ -1,99 +1,10 @@
-# num = input('개수를 입력하세요.')
-#
-# # 나는 사과 __개를 먹었다. 로 출력하는 코드를 작성해보시오.
-# print('나는 사과 {0}개를 먹었다.'.format(num))
-# print('나는 사과 %s개를 먹었다.' % (num))
-# print(f'나는 사과 {num}개를 먹었다.')
-# print(f"나는 사과 {num}개를 먹었다.")
-# y = 3.42134234
-# print('{0:0.4f}'.format(y))
-# print('{0:10.4f}'.format(y))
-# print('{0:<10.4f}'.format(y))
-# print('{0:>10.4f}'.format(y))
+add = lambda a, b: a + b
+print(add(3, 4))
+
+def add(a, b):
+    return a + b
+
+print(add(3, 4))
 
 
-# n = 4.567173
-# print("{0:0.4f}".format(n))
-# print("{:0.4f}".format(n))
-# print(f"{n:0.4f}")
-# print(f"{n}")
-
-# a, b = map(int, input().split())
-# a = int(input())
-# b = int(input())
-# print(f"{a:>10}")
-# print(f"*{b:>9}")
-# print("-" * 10)
-# print(f"{a * b:>10}")
-# a = int(input())
-# b = int(input())
-# a, b = map(int ,input().split())
-# print("{0:>7}".format(a))
-# print('x', end='')
-# print("{0:>6}".format(b))
-# print("{0:<7}".format('-------'))
-# print('-' * 10)
-# print("{0:>7}".format(a * b))
-
-# a = '개울가에 소년이 나타났다. 소녀는 개울가를 건너고자 한다.'
-# print(a.count('개울가'))
-# print(a.find('소년'))
-# # 소년은 6번째에 나옵니다.
-# print(f'소년은 {a.find("소년")+1}번째에 나옵니다.')
-# print(a.find('소련'))  # -1
-# print(a.index('소년'))
-# print(a.index('소련'))
-#
-# print(','.join("Hello"))
-
-# Yes / No ?  yEs  , YEs, yes, Yes1
-# a = input()
-# print(a.upper())
-# print(a.lower())
-#
-# str = ' Hello '
-# print(str)
-# print(str.strip())
-# a = 'I like bananas. You like bananas.'
-# print(a.replace('banana', 'apple'))
-# a = [1, 5, 3]
-# sorted(a) #정렬된 것이 자기자신에게 반영이 안됨.
-# print(a)
-#
-# a.sort()
-# print(a)
-
-# # score = 80
-# score = int(input())
-# # if score >= 60:
-# #     res = '축하'
-# # else:
-# #     res = '으이구~'
-# res = '축하' if score >= 60 else '이이구~'
-# print(res)
-# print(*range(1, 101))
-# print(*list(range(1, 101)))
-#
-# a = (1, 2, 3)
-# print(type(a))   # <class 'tuple'>
-# print(id(a))     # 2264152697056
-# b = 1,    # tuple
-# print(id(b))    # 3035229195760
-# a = a + (6,)    # 튜플 추가 덧셈 연산은 에러가 아님.
-# print(a)
-# print(id(a))  # 2264152697056
-#
-# a = (1, 2, 3, 6)
-# a = a + 6  # 정수와의 + 연산은 에러 발생
-# # TypeError: can only concatenate tuple (not "int") to tuple
-# print(a)
-
-my_class = {1: '공혜민', 2: '권성재'}
-print(type(my_class))
-print(my_class)
-my_class[3] = '김민성'  # 추가하기
-print(my_class)
-num = int(input('번호 입력 : '))
-name = my_class[num]
-print(f'학생 이름 : {name} 입니다.')
-# 딕셔너리 my_class에 전학생 학번과 이름을 입력받아 1명 추가하고 전체 학생 명단을 출력하시오.
+print((lambda a, b: a + b)(3, 4))
