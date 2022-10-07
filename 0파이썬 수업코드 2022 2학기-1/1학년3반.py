@@ -133,6 +133,9 @@ def 게임화면생성(행맨그림, 틀린단어, 맞춘단어, 비밀단어):
     print(행맨그림[len(틀린단어)])
     print()
     print('틀린 단어 표시 : ', end=' ')
+    i: object
+    j: object
+
     for i in 틀린단어:
         print(i, end=' ')
     print()
