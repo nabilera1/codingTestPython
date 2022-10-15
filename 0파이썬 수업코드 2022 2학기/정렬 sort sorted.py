@@ -37,3 +37,5 @@ print('3:', newNums)
 
 
 # https://docs.python.org/ko/3/howto/sorting.html
+
+print(sorted(nums, reverse=True))
