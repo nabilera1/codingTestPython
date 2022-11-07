@@ -6,7 +6,7 @@
 #     f.write(data)
 # f.close()
 
-
+# C:\Users\user\PycharmProjects\codingTestPython\코딩테스트학습\file
 f = open("./file/newfile1.txt", "w")
 for i in range(1,11):
     f.write(f'{i}번째 줄입니다.\n')
