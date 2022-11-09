@@ -1,9 +1,15 @@
-dict={1:'a',2:'b',3:'o',4:'d',5:'h',6:'m',7:'k',8:'i',9:'g'}
-for i in range(1,10,1):
-    if(i%3==0):
-        print(dict[i],end='')
-dict[10]='hello'
-print('')
-print(dict[10])
-print(dict)
-print("성공적으로 추가되었습니다")
+# f = open("c:/1/newfile.txt", 'w')
+# for i in range(1, 11):
+#     data = f'{i}번째 줄입니다.\n'
+#     f.write(data)
+#
+# f.close()
+f = open("c:/1/mydiary.txt", 'r', encoding='utf-8') #cp949
+# print(f.read())
+lines = f.readlines()
+print(lines)
+for line in lines:
+    line = line.strip()
+    print(line)
+
+f.close()
