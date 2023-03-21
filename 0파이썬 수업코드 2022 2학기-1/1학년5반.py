@@ -1,16 +1,17 @@
-filename = 'c:/1/test1.txt'
+filename = 'c:/1/새파일.txt'
+
 def showFile(filename):
-    f = open(filename, 'r', encoding='utf-8')
-    l = f.readlines()
-    print(l)
-    txt=''
-    for i in l:
-        txt=i.strip()
-        txt.replace('java','python')
-        print(txt)
+    f = open(filename, 'r', encoding='utf-8') #read
+    line = f.readlines()
+    print(line) #list
+    for l in line:
+        a = l.strip()
+        print(a)
     f.close()
 
 showFile(filename)
+
+
 
 
 # while True: #무한 루프
