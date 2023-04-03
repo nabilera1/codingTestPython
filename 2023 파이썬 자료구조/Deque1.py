@@ -1,8 +1,6 @@
-from queue1 import Queue
-
-
+from Queue1 import Queue
 class Deque(Queue):
-    def enqueu_back(self, item):
+    def enqueue_back(self, item):
         self.items.append(item)
 
     def dequeue_front(self):
@@ -11,7 +9,6 @@ class Deque(Queue):
             return value
         else:
             print('Deque is empty')
-
 
 if __name__ == '__main__':
     dq = Deque()
