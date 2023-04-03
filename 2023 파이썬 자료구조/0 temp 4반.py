@@ -1,5 +1,8 @@
-# from node import Node
-# class LinkedListFIFO(object):
+class Node(object):
+  def __init__(self, value = None, pointer = None):
+    self.value = value
+    self.pointer = pointer
+
 class LinkedListFIFO(Node):
   def __init__(self):  # head와 tail 코드 사용
     self.head = None
@@ -45,10 +48,18 @@ class LinkedListFIFO(Node):
 
   # 새 노드 추가
   def addNode(self, value):
+    # if not self.head:
+    #   self._addFirst(value)
+    # else:
+    #   self._add(value)
+    self.length += 1
+    node = Node(value)
     if not self.head:
-      self._addFirst(value)
+      self.head = node
+      self.tail = node
     else:
-      self._add(value)
+      self.tail.pointer = node
+      self.tail = node
 
   # find node by index, 이전 코드와 동일
   def _find(self, index):
@@ -135,3 +146,20 @@ class LinkedListFIFO(Node):
           prev.pointer = node.pointer
       else:
         print('값 {}에 해당되는 노드가 없습니다.'.format(value))
+if __name__ == '__main__':
+  link = LinkedListFIFO()
+  for i in range(1, 5):
+    link.addNode(i)
+  print('연결리스트 출력')
+  link._printList() # 1 2 3 4
+
+  print('인덱스 2인 노드 삭제 후, 연결리스트 출력:')
+  link.deleteNode(2)
+  link._printList() # 1 2 4
+  print('값이 15인 노드 추가 후, 연결리스트 출력')
+  link.addNode(15)
+  link._printList()  # 1 2 4 15
+
+  for i in range(link.length - 1, -1, -1):
+    link.deleteNode(i)
+  link._printList()
