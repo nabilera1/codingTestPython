@@ -4,81 +4,151 @@ class Node(object):
         self.pointer = pointer
 
 
-# class LinkedListLIFO(object):
-class LinkedListLIFO(Node):  # 파일 분할 안할 시 상속으로 처리
-    def __init__(self):
-        self.head = None
-        self.length = 0
+# from node import Node
+# class LinkedListFIFO(object):
+class LinkedListFIFO(Node):
+  def __init__(self):  # head와 tail 코드 사용
+    self.head = None
+    self.length = 0
+    self.tail = None
 
-    # 헤드부터 각 노드의 값을 출력
-    def _printList(self):
-        node = self.head
-        while node:
-            print(node.value, end=' ')
-            node = node.pointer
-        print()
+  def _printList(self):
+    node = self.head
+    while node:
+      print(node.value, end=' ')
+      node = node.pointer
+    print()
 
-    # 이전 노드를 기반으로 노드를 삭제한다.
-    def _delete(self, prev, node):
-        self.length = -1
-        if not prev:
-            self.head = node.pointer  # None 아닌가?
+  # 첫 번째 위치에 노드 추가
+  def _addFirst(self, value):
+    self.length = 1
+    node = Node(value)
+    self.head = node
+    self.tail = node
+
+
+
+  # 새 노드를 추가한다. 테일이 있다면, 테일의 다음 노드는
+  # 새 노드를 가리키고, 테일은 새 노드를 가리킨다.
+
+  def _add(self, value):
+    self.length += 1
+    node = Node(value)
+    # if self.tail:
+    #   self.tail.pointer = node
+    self.tail.pointer = node
+    self.tail = node
+
+  def addNodeNew(self, value): # 새로 만들어 본 코드 ----------------
+    self.length += 1
+    node = Node(value)
+    if not self.head:
+      self.head = node
+      self.tail = node
+    else:
+      self.tail.pointer = node
+      self.tail = node
+
+  # 새 노드 추가
+  def addNode(self, value):
+    if not self.head:
+      self._addFirst(value)
+    else:
+      self._add(value)
+
+  # find node by index, 이전 코드와 동일
+  def _find(self, index):
+    prev = None
+    node = self.head
+    i = 0
+    while node and i<index:
+      prev = node
+      node = node.pointer
+      i += 1
+
+    return node, prev, i
+
+  # find node by value, 이전 코드와 동일
+  def _find_by_value(self, value):
+    prev = None
+    node = self.head
+    found = False
+    while node and not found:
+      if node.value == value:
+        found = True
+      else:
+        prev = node
+        node = node.pointer
+    return node, prev, found
+
+
+  def _deleteFirst(self):
+    self.length = 0
+    self.head = None
+    self.tail = None
+    print("연결리스트가 비었습니다.")
+
+
+  # 인덱스에 해당하는 노드 삭제
+  def deleteNode(self, index):
+    if not self.head or not self.head.pointer:
+      self._deleteFirst()
+    else:
+      node, prev, i = self._find(index)
+      if i == index and node:
+        self.length -= 1
+        if i==0 or not prev:
+          self.head = node.pointer
+          self.tail = node.pointer
         else:
-            prev.pointer = node.pointer
+          prev.pointer = node.pointer
+      else:
+        print('인덱스 {}에 해당되는 노드가 없습니다.'.format(index))
 
-    # add new Node
-    def _add(self, value):
-        self.length += 1
-        self.head = Node(value, self.head)
-
-    # find node by index
-    def _find(self, index):
-        prev = None
-        node = self.head
-        i = 0
-        while node and i < index:
-            prev = node
-            node = node.pointer
-            i += 1
-
-        return node, prev, i
-
-    # find node by value
-    def _find_by_value(self, value):
-        prev = None
-        node = self.head
-        found = False
-        while node and not found:
-            if node.value == value:
-                found = True
-            else:
-                prev = node
-                node = node.pointer
-        return node, prev, found
-
-    # 해당 인덱스의 노드 삭제하기
-    def deleteNode(self, index):
-        node, prev, i = self._find(index)
-        if index == i:
-            self._delete(prev, node)
+  # 인덱스에 해당하는 노드 삭제, None
+  def deleteNode1(self, index):
+    if not self.head or not self.head.pointer:
+      self._deleteFirst()
+    else:
+      node, prev, i = self._find(index)
+      if i == index and node:
+        self.length -= 1
+        if i==0 or not prev:
+          self.head = None
+          self.tail = None
         else:
-            print(f'인덱스 {index}에 해당하는 노드가 없습니다.')
+          prev.pointer = node.pointer
+      else:
+        print('인덱스 {}에 해당되는 노드가 없습니다.'.format(index))
 
-    # 값에 해당하는 노드를 찾아서 삭제한다.
-    def deleteNodeByValue(self, value):
-        node, prev, found = self._find_by_value(value)
-        if found:
-            self._delete(prev, node)
+  # 실습 과제, 통합 deleteNodeNew()를 만들고 다양한 실행결과를 통해
+  # 오류가 없는 코드를 제출하시오.
+  def deleteNodeNew(self, index):
+    pass 
+
+  # 값에 해당하는 노드 삭제
+  def deleteNodeByValue(self, value):
+    if not self.head or not self.head.pointer:
+      self._deleteFirst()
+    else:
+      node, prev, i = self._find_by_value(value)
+      if node and node.value == value:
+        self.length -= 1
+        if i==0 or not prev:
+          self.head = node.pointer
+          self.tail = node.pointer
         else:
-            print(f'값 {value}에 해당하는 노드가 없습니다.')
-
+          prev.pointer = node.pointer
+      else:
+        print('값 {}에 해당되는 노드가 없습니다.'.format(value))
 
 if __name__ == '__main__':
-    link = LinkedListLIFO()
-    for i in range(1, 5):
-        link._add(i)
-    print("Linked List :")
-    link._printList()
-    print('인덱스가 2인 노드 삭제 후, 연결리스트 출력')
-    link.deleteNode(2)
-    link._printList()
+  link = LinkedListFIFO()
+  for i in range(1, 5):
+    link.addNode(i)
+  print('연결리스트 출력')
+  link._printList() # 1 2 3 4
+
+  print('인덱스 2인 노드 삭제 후, 연결리스트 출력:')
+  link.deleteNode(2)
+  link._printList() # 1 2 4
