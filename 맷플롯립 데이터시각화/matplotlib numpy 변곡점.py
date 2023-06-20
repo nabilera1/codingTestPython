@@ -8,7 +8,7 @@ import scipy.optimize as op
 # df = lambda x: np.cos(x) - 0.1
 # x = np.linspace(-1, 20, 1000)
 #
-# plt.figure(figsize=(10, 4))
+# plt.figure(figsize=(10, 4))d
 # plt.plot(x, f(x))
 # plt.plot(x, 0 * x, 'k-')
 # plt.show()
