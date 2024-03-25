@@ -1,32 +1,25 @@
-'''
-구글 코랩 링크
-https://colab.research.google.com/drive/1ouqyG3q92C1d-Dh0ORFXQPnJdtuJGPUf
-구글 클래스룸
-https://classroom.google.com/c/NTgzNjc4MjI0NzQ1
-'''
+from sklearn.neural_network import MLPClassifier
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
 
-# 1.1 정수
-'''
-파이썬에서 정수는 int로 나타내며 immutable형이다.
-불편형 객체는 변수와 객체 참조 간에 차이가 없다.
-999 정수를 나타내는 데 필요한 바이트 수를 확인해보자.
-파이썬 정수 크기는 적어도 32비트이다.
-'''
+# 데이터 로드
+iris = load_iris()
+X, y = iris.data, iris.target
 
-n = 999
-print(n.bit_length())
+# 데이터 분할
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
 
+# 인공 신경망 모델 생성
+model = MLPClassifier(hidden_layer_sizes=(10,), max_iter=1000)
 
-s='11'
-print(int(s))
-print(int(s,2))
-# ctrl + d
-# 실행 : shift + f10
-# 실행 : ctrl + shift + f10
-print(int(s,8))
-print(int(s,16))
-# 5진수도 될까? 한번 해보자.
-print(int(s,5))
+# 모델 학습
+model.fit(X_train, y_train)
 
-# 1.2 부동소수점
+# 모델 예측
+y_pred = model.predict(X_test)
+print(y_pred)
 
+# 모델 성능 평가
+accuracy = accuracy_score(y_test, y_pred)
+print("Accuracy:", accuracy)

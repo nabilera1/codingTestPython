@@ -2,7 +2,7 @@
 
 # 절대경로 / 상대경로
 #fn = 'c:/1/mydiary.txt' # 절대경로
-fn = '../2022 2학기/mydiary.txt' # 상대경로
+fn = '../2024 파이썬 기초/mydiary.txt' # 상대경로
 f = open(fn,'w') # 파일 생성
 f.write('오늘의 일기\n')
 f.close()

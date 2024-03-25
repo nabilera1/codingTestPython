@@ -7,12 +7,12 @@
 # f.close()
 
 # C:\Users\user\PycharmProjects\codingTestPython\코딩테스트학습\file
-# f = open("../2022 2학기/newfile.txt", "w")
+# f = open("../2024 파이썬 기초/newfile.txt", "w")
 # for i in range(1,11):
 #     f.write(f'{i}번째 줄입니다.\n')
 # f.close()
 #
-# f = open("../2022 2학기/newfile.txt", "r")
+# f = open("../2024 파이썬 기초/newfile.txt", "r")
 # print(f.read())
 # f.close()
 
