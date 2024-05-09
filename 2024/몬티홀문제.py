@@ -1,7 +1,7 @@
 import time
 import random
 
-def populate_doors(): # put a car behind one door
+def populate_doors(): # put a car behind one door, populate 채우다
 	door=['goat', 'goat', 'goat']
 	door[random.randint(0,2)]='car'
 	return door
