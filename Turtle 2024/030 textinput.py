@@ -4,6 +4,7 @@ t.shape('turtle')
 t.speed('fast')
 t.color("hotpink")
 n = turtle.textinput("모양 입력 받기", "모양을 입력하세요")
+n = n.upper()
 if n == 'T':
    for i in range(3):
        t.fd(100)
