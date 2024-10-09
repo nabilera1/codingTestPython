@@ -23,3 +23,5 @@ except ValueError as e:
     print(f"Error: {e}")  # 에러 메시지를 출력
 
 print(rect.width)  # 정상적인 값 출력
+
+
