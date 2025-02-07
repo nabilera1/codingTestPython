@@ -1,13 +1,14 @@
-import tkinter as tk # 간단한 윈도, 버튼, 레이블 등 구현용
-from PIL import Image, ImageTk, ImageDraw # 이미지 편집 등
+import tkinter as tk
+from PIL import Image, ImageTk, ImageDraw, ImageFont
 import math
+
 
 # --- 설정 값 ---
 IMAGE_SIZE = 400         # 돌림판 이미지 크기 (정사각형)
 NUM_SECTORS = 8          # 돌림판의 구역 수
 ROTATION_SPEED = 5       # 회전 속도 (1회 애니메이션마다 추가되는 각도)
 
-# --- 돌림판 이미지 생성 함수 ---
+
 def create_wheel_image(size, sectors):
     """지정한 크기와 구역 수에 따라 돌림판 이미지를 생성"""
     image = Image.new("RGBA", (size, size), (255, 255, 255, 0))
@@ -19,6 +20,13 @@ def create_wheel_image(size, sectors):
     # 각 구역별 색상 (두 가지 색상을 번갈아 사용)
     colors = ["#FFCC00", "#FF6666"]
 
+    # 원하는 폰트와 사이즈 설정 (arial.ttf가 설치되어 있지 않으면 기본 폰트를 사용)
+    font_size = 30  # 폰트 크기 조절 가능
+    try:
+        font = ImageFont.truetype("arial.ttf", font_size)
+    except IOError:
+        font = ImageFont.load_default()
+
     for i in range(sectors):
         start_angle = i * angle_per_sector
         end_angle = start_angle + angle_per_sector
@@ -27,13 +35,16 @@ def create_wheel_image(size, sectors):
             start=start_angle, end=end_angle,
             fill=colors[i % len(colors)], outline="black"
         )
-        # 구역 중앙에 텍스트 (번호)를 그리려면
+        # 섹터 중앙에 텍스트 (번호)를 그리기 위한 계산
         mid_angle = math.radians(start_angle + angle_per_sector / 2)
         text_radius = radius * 0.6
         text_x = center[0] + text_radius * math.cos(mid_angle)
         text_y = center[1] + text_radius * math.sin(mid_angle)
-        draw.text((text_x-10, text_y-10), str(i+1), fill="black")
+        # 폰트를 지정하여 텍스트를 그림 (폰트 크기를 조절할 수 있음)
+        draw.text((text_x-10, text_y-10), str(i+1), fill="black", font=font)
     return image
+
+
 
 # --- Tkinter 애플리케이션 ---
 class SpinningWheelApp:
