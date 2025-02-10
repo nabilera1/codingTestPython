@@ -50,4 +50,5 @@ class BowlingScoreboard(QWidget):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     scoreboard = BowlingScoreboard()
-    sys.exit(app.exec_())
+    app.exec_()
+    # sys.exit(app.exec_())

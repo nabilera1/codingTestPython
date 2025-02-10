@@ -5,6 +5,7 @@ from PyQt5.QtWidgets import QApplication, QWidget
 
 
 class BowlingScoreboard(QWidget):
+# QWidget 상속받아야 아래 initUI 내 메서드 호출 가능
     def __init__(self):
         super().__init__()
         self.initUI()
@@ -21,4 +22,4 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     scoreboard = BowlingScoreboard()
     sys.exit(app.exec_())
-    # sys.exit(app.exec_()) : 프로그램 실행 유지.
+    # sys.exit(app.exec_()) : # 이벤트 루프 실행, 프로그램 실행 유지.
