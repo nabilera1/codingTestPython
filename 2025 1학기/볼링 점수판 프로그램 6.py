@@ -2,13 +2,12 @@ import sys
 import random
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QVBoxLayout, QGridLayout, QLineEdit
 
-# 멈춤 현상 있음
 class BowlingGame(QWidget):
     def __init__(self):
         super().__init__()
         self.frames = [[] for _ in range(10)]  # 10 프레임 저장
         self.scores = [0] * 10  # 프레임 점수 저장
-        self.current_frame = 0  # 현재 프레임 진행 상태
+        self.current_frame = 0  # 현재 진행 프레임
         self.initUI()
 
     def initUI(self):
@@ -20,14 +19,21 @@ class BowlingGame(QWidget):
         self.layout = QVBoxLayout()
         self.grid_layout = QGridLayout()
 
-        # 프레임 번호 표시
+        # 첫 번째 열에 설명 추가 (왼쪽 레이블)
+        labels = ["투구 1", "투구 2", "총점"]
+        for row, text in enumerate(labels):
+            label = QLabel(text)
+            self.grid_layout.addWidget(label, row + 1, 0)
+
+        # 프레임 번호, 점수 표시용 QLineEdit
         self.frame_labels = []
         self.score_inputs = []
+        self.total_scores = []
 
         for i in range(10):
             # 프레임 번호 레이블
             frame_label = QLabel(f"Frame {i+1}")
-            self.grid_layout.addWidget(frame_label, 0, i)  # 1행에 프레임 번호 표시
+            self.grid_layout.addWidget(frame_label, 0, i + 1)  # 1행에 프레임 번호
             self.frame_labels.append(frame_label)
 
             # 점수 표시용 QLineEdit (투구 1, 2)
@@ -36,17 +42,15 @@ class BowlingGame(QWidget):
             first_input.setReadOnly(True)
             second_input.setReadOnly(True)
 
-            self.grid_layout.addWidget(first_input, 1, i)
-            self.grid_layout.addWidget(second_input, 2, i)
+            self.grid_layout.addWidget(first_input, 1, i + 1)
+            self.grid_layout.addWidget(second_input, 2, i + 1)
 
             self.score_inputs.append((first_input, second_input))
 
-        # 점수 합산 표시
-        self.total_scores = []
-        for i in range(10):
+            # 총점 표시용 QLineEdit
             total_score = QLineEdit()
             total_score.setReadOnly(True)
-            self.grid_layout.addWidget(total_score, 3, i)  # 총점 4번째 행에 배치
+            self.grid_layout.addWidget(total_score, 3, i + 1)
             self.total_scores.append(total_score)
 
         self.layout.addLayout(self.grid_layout)
@@ -94,17 +98,9 @@ class BowlingGame(QWidget):
     def play_final_frame(self):
         """ 10번째 프레임 (최대 3번 투구 가능) """
         first = random.randint(0, 10)
-        if first == 10:
-            second = random.randint(0, 10)
-            third = random.randint(0, 10 if second != 10 else 10)
-            return ["X", "X" if second == 10 else second, "X" if third == 10 else third]
-
-        second = random.randint(0, 10 - first)
-        if first + second == 10:
-            third = random.randint(0, 10)
-            return [first, "/", third]
-
-        return [first, second]
+        second = random.randint(0, 10 if first == 10 else 10 - first)
+        third = random.randint(0, 10) if first + second >= 10 else None
+        return [first, second if second != 10 else "X", third] if third is not None else [first, second]
 
     def calculate_scores(self):
         """ 점수 계산 (스트라이크, 스페어 보너스 적용) """
@@ -123,20 +119,18 @@ class BowlingGame(QWidget):
         """ 스트라이크 보너스 계산 """
         if frame_index >= 9:
             return 0
-        next_frame = self.frames[frame_index + 1]
-        if "X" in next_frame:
-            if frame_index + 1 == 9:
-                return 10 + (next_frame[1] if isinstance(next_frame[1], int) else 10)
-            second_frame = self.frames[frame_index + 2]
-            return 10 + (second_frame[0] if isinstance(second_frame[0], int) else 10)
-        return next_frame[0] + (next_frame[1] if isinstance(next_frame[1], int) else 10)
+        next_frame = self.frames[frame_index + 1] if frame_index + 1 < 10 else []
+        if next_frame and "X" in next_frame:
+            second_frame = self.frames[frame_index + 2] if frame_index + 2 < 10 else []
+            return 10 + (second_frame[0] if second_frame else 0)
+        return sum(next_frame[:2]) if next_frame else 0
 
     def spare_bonus(self, frame_index):
         """ 스페어 보너스 계산 """
         if frame_index >= 9:
             return 0
-        next_frame = self.frames[frame_index + 1]
-        return next_frame[0] if isinstance(next_frame[0], int) else 10
+        next_frame = self.frames[frame_index + 1] if frame_index + 1 < 10 else []
+        return next_frame[0] if next_frame else 0
 
     def update_ui(self):
         """ GUI 업데이트 (총점 표시) """
