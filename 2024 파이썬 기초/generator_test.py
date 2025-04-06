@@ -11,14 +11,16 @@ for number in generate_numbers(1, 5):
 
 
 g=generate_numbers(11, 15)
-print(next(g))
-print(next(g))
+print(next(g)) # 11
+print(next(g)) # 12
 
 
 # 참조
-print(generate_numbers(11, 15).__next__())
-print(generate_numbers(11, 15).__next__())
+print(generate_numbers(11, 15).__next__()) # 11
+print(generate_numbers(11, 15).__next__()) # 11
 
 
-print(next(generate_numbers(11, 15)))
-print(next(generate_numbers(11, 15)))
+print(next(generate_numbers(11, 15))) # 11
+print(next(generate_numbers(11, 15))) # 11
+
+print(range(1_000))
