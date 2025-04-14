@@ -46,7 +46,7 @@ class BST:
         elif n.key < key:
             n.right = self.put_item(n.right, key, value)
         else:
-            n.value = value  # typo fixed from 'vlaue'
+            n.value = value
         return n
 
     def min(self) -> Optional[Node]:
