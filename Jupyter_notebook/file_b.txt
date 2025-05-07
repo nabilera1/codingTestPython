@@ -1,0 +1,10 @@
+Python is widely used in data science.
+Machine learning relies on large datasets.
+You can use sets to eliminate duplicates.
+Natural language processing is a subfield of AI.
+Programming languages like Python are popular.
+Python can be used to manipulate files and data.
+Data visualization is key in data analysis.
+Machine learning models benefit from clean data.
+Artificial intelligence is a broad discipline.
+Python's simplicity makes it great for beginners.
