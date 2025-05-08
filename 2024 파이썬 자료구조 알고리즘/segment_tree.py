@@ -34,4 +34,56 @@ N개의 수가 주어지고, 다음과 같은 쿼리들을 반복적으로 수�
 
 """
 
-print('test')
+import sys
+input = sys.stdin.readline
+
+def build_tree(arr):
+    n = len(arr)
+    size = 1
+    while size < n:
+        size *= 2
+    tree = [0] * (2 * size)
+    # 리프 노드 채우기
+    for i in range(n):
+        tree[size + i] = arr[i]
+    # 내부 노드 채우기
+    for i in range(size - 1, 0, -1):
+        tree[i] = tree[2 * i] + tree[2 * i + 1]
+    print(f'\ntree : {tree}')
+    return tree, size
+
+def update(tree, size, index, value):
+    index += size - 1
+    tree[index] = value
+    while index > 1:
+        index //= 2
+        tree[index] = tree[2 * index] + tree[2 * index + 1]
+    print(f'tree : {tree}')
+
+def query(tree, size, left, right):
+    left += size - 1
+    right += size - 1
+    result = 0
+    while left <= right:
+        if left % 2 == 1:
+            result += tree[left]
+            left += 1
+        if right % 2 == 0:
+            result += tree[right]
+            right -= 1
+        left //= 2
+        right //= 2
+    return result
+
+# 입력 처리
+n, m, k = map(int, input().split())
+arr = [int(input()) for _ in range(n)]
+tree, size = build_tree(arr)
+
+for _ in range(m + k):
+    a, b, c = map(int, input().split())
+    if a == 1:
+        update(tree, size, b, c)
+    else:
+        print(query(tree, size, b, c))
+
