@@ -1,4 +1,4 @@
-AVL 전체코드 참고
+# AVL 전체코드 참고
 
 class Node:
     def __init__(self, key, value, height, left=None, right=None): # Node 생성자

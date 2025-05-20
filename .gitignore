@@ -1,0 +1,67 @@
+# Python 바이트코드 및 캐시
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# 인터프리터 및 빌드 산출물
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+sdist/
+var/
+*.manifest
+*.spec
+
+# 가상환경 디렉터리
+venv/
+env/
+ENV/
+.venv/
+.python-version
+
+# 로그 및 실행 중 생성되는 파일
+*.log
+
+# 운영체제 생성 파일
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 에디터 및 IDE 설정 (JetBrains PyCharm)
+.idea/
+*.iml
+
+# 환경 변수 및 민감 정보
+.env
+.env.*
+
+# 기타
+*.swp
+*.bak
+*.tmp
+
+# Jupyter Notebook checkpoint
+.ipynb_checkpoints/
+
+# pytest cache
+.pytest_cache/
+
+# mypy type checker
+.mypy_cache/
+
+# coverage
+htmlcov/
+.coverage
+coverage.xml
+
+# pylint
+pylint-report.txt
+pylint-global.rc
+
+# pyinstaller
+*.spec
