@@ -29,5 +29,20 @@
 from collections import defaultdict
 
 dct = defaultdict(lambda: 100)
+# dct = defaultdict(100) # TypeError: first argument must be callable or None
 v1 = dct['a1']
 print(v1)
+print(type(v1))
+print(type(dct))
+print(dct)
+print(dct['a1'])
+dct['a1'] = 200
+print(dct)
+print(dct['a1'])
+# 100
+# <class 'int'>
+# <class 'collections.defaultdict'>
+# defaultdict(<function <lambda> at 0x0000017B4E83E340>, {'a1': 100})
+# 100
+# defaultdict(<function <lambda> at 0x0000017B4E83E340>, {'a1': 200})
+# 200
